@@ -34,8 +34,14 @@ var processCmd = &cobra.Command{
 
 Example: nulceotide process "AGCCGTTAA"`,
 	Run: func(cmd *cobra.Command, args []string) {
+		fmt.Println(args[0])
 		fmt.Println("process called")
+		processDNA(args[0])
 	},
+}
+
+func processDNA(dnaString string){
+	fmt.Println(dnaString)
 }
 
 func init() {
