@@ -29,13 +29,10 @@ import (
 // processCmd represents the process command
 var processCmd = &cobra.Command{
 	Use:   "process",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
+	Short: "Calculate nucleotide distribution in a single stranded DNA",
+	Long: `Calculate the nucleotide distribution in a single strand of DNA
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+Example: nulceotide process "AGCCGTTAA"`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("process called")
 	},
