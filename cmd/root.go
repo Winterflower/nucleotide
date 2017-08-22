@@ -38,7 +38,7 @@ var RootCmd = &cobra.Command{
 	Long: `A longer description that spans multiple lines and likely contains
 examples and usage of using your application. For example:
 
-Nucleotide is a DNA nucleotide distribution count library written in Go`
+Nucleotide is a DNA nucleotide distribution count library written in Go`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	//	Run: func(cmd *cobra.Command, args []string) { },
