@@ -24,6 +24,8 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
+	"strings"
+	"log"
 )
 
 // processCmd represents the process command
@@ -34,14 +36,22 @@ var processCmd = &cobra.Command{
 
 Example: nulceotide process "AGCCGTTAA"`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println(args[0])
-		fmt.Println("process called")
+		log.Println("Processing DNA string")
 		processDNA(args[0])
 	},
 }
 
 func processDNA(dnaString string){
-	fmt.Println(dnaString)
+	counts := make(map[rune]int)
+	allowedNucleotides := "ATGC"
+	for _, letter := range dnaString{
+		if strings.ContainsRune(allowedNucleotides, letter){
+			counts[letter]++
+		}
+	}
+	return counts
+	
+	
 }
 
 func init() {
