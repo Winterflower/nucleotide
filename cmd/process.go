@@ -21,8 +21,7 @@
 package cmd
 
 import (
-	"fmt"
-
+	
 	"github.com/spf13/cobra"
 	"strings"
 	"log"
@@ -41,7 +40,7 @@ Example: nulceotide process "AGCCGTTAA"`,
 	},
 }
 
-func processDNA(dnaString string){
+func processDNA(dnaString string) map[rune]int{
 	counts := make(map[rune]int)
 	allowedNucleotides := "ATGC"
 	for _, letter := range dnaString{
