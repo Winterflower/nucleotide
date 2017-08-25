@@ -36,11 +36,11 @@ var processCmd = &cobra.Command{
 Example: nulceotide process "AGCCGTTAA"`,
 	Run: func(cmd *cobra.Command, args []string) {
 		log.Println("Processing DNA string")
-		processDNA(args[0])
+		ProcessDNA(args[0])
 	},
 }
 
-func processDNA(dnaString string) map[rune]int{
+func ProcessDNA(dnaString string) map[rune]int{
 	counts := make(map[rune]int)
 	allowedNucleotides := "ATGC"
 	for _, letter := range dnaString{
